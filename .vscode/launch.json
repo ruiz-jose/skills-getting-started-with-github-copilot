@@ -6,7 +6,7 @@
   "configurations": [
     {"name":"Debugpy Old: Flask","type":"debugpy-old","request":"launch","module":"flask","env":{"FLASK_APP":"app.py","FLASK_DEBUG":"1"},"args":["run","--no-debugger","--no-reload"],"jinja":true,"justMyCode":true},{
       "name": "Launch Mergington WebApp",
-      "type": "debugpy",
+      "type": "python",
       "request": "launch",
       "module": "uvicorn",
       "args": [
