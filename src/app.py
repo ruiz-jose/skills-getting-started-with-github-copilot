@@ -172,12 +172,9 @@ def validate_signup(activity_name: str, email: str):
 @app.post("/activities/{activity_name}/signup")
 def signup_for_activity(activity_name: str, email: str):
     """Sign up a student for an activity"""
-    validate_signup(activity_name, email)   
-        raise HTTPException(status_code=404, detail="Activity not found")
-
+    validate_signup(activity_name, email)
     # Get the specific activity
     activity = activities[activity_name]
-
     # Add student
     activity["participants"].append(email)
     return {"message": f"Signed up {email} for {activity_name}"}
